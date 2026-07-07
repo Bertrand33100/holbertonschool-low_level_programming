@@ -1,90 +1,98 @@
-# Structures and Typedef
+# Structures et Typedef en C
 
 ## Description
 
-This project introduces **structures (`struct`)** and **`typedef`** in the C programming language.
+Ce projet a pour objectif de découvrir les **structures (`struct`)** et le mot-clé **`typedef`** en langage C.
 
-Structures allow grouping multiple variables of different types into a single object. They are useful for representing real-world entities such as a person, a dog, a student, or a book.
+Les structures permettent de regrouper plusieurs variables de types différents dans une seule entité. Elles sont utilisées pour représenter des objets du monde réel comme une personne, un chien, une voiture, un étudiant ou encore un livre.
 
-The project also covers the use of `typedef` to create aliases for existing data types, making code easier to read and maintain.
-
----
-
-## Learning Objectives
-
-By the end of this project, I am able to:
-
-- Understand what a structure is.
-- Define and declare structures.
-- Access and modify structure members.
-- Understand when and why structures are useful.
-- Create aliases using `typedef`.
-- Improve code readability with `typedef`.
-- Organize structure declarations inside header files.
-- Use include guards to prevent multiple inclusions.
+Le mot-clé `typedef` permet de créer un alias pour un type existant afin de rendre le code plus simple à lire et à écrire.
 
 ---
 
-## Concepts
+# Objectifs d'apprentissage
 
-### Structure (`struct`)
+À la fin de ce projet, je suis capable de :
 
-A structure groups several related variables under one name.
-
-Example:
-
-- Name
-- Age
-- Owner
-
-These values belong to the same object.
+- Comprendre ce qu'est une structure (`struct`).
+- Définir une structure.
+- Déclarer des variables de type structure.
+- Accéder et modifier les membres d'une structure.
+- Comprendre dans quels cas utiliser une structure.
+- Comprendre le rôle de `typedef`.
+- Créer un alias avec `typedef`.
+- Organiser les structures dans des fichiers d'en-tête (`.h`).
+- Utiliser des _include guards_ pour éviter les inclusions multiples d'un même fichier.
 
 ---
 
-### Typedef
+# Notions importantes
 
-`typedef` creates an alias for an existing type.
+## Structure (`struct`)
 
-Instead of writing:
+Une structure permet de regrouper plusieurs informations sous un même nom.
+
+Exemple :
+
+Un chien possède :
+
+- un nom ;
+- un âge ;
+- un propriétaire.
+
+Ces informations sont regroupées dans une seule structure.
+
+---
+
+## `typedef`
+
+Le mot-clé `typedef` permet de créer un alias pour un type existant.
+
+Par exemple, au lieu d'écrire :
 
 ```c
-struct dog my_dog;
+struct dog mon_chien;
 ```
 
-You can write:
+on pourra écrire :
 
 ```c
-dog_t my_dog;
+dog_t mon_chien;
 ```
 
-This makes the code shorter and easier to read.
+si un alias `dog_t` a été créé.
+
+L'objectif est de rendre le code plus lisible.
 
 ---
 
-## Files
+# Compétences acquises
 
-| File        | Description                         |
-| ----------- | ----------------------------------- |
-| `dog.h`     | Defines the `struct dog` structure. |
-| `README.md` | Project documentation.              |
+Au cours de ce projet, j'ai appris à :
+
+- créer une structure ;
+- utiliser une structure dans un programme ;
+- manipuler les membres d'une structure ;
+- comprendre la différence entre une structure et un pointeur vers une structure ;
+- utiliser les opérateurs `.` et `->` ;
+- créer un alias avec `typedef` ;
+- protéger un fichier d'en-tête avec des _include guards_.
 
 ---
 
-## Compilation
+# Compilation
 
-Compile with:
+Compiler le projet avec :
 
 ```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o output
+gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c -o programme
 ```
 
 ---
 
-## Betty Style
+# Vérification du style Betty
 
-This project follows the Betty coding style.
-
-Check style with:
+Contrôler le style du code avec :
 
 ```bash
 betty *.c *.h
@@ -92,14 +100,14 @@ betty *.c *.h
 
 ---
 
-## Requirements
+# Contraintes du projet
 
 - Ubuntu 20.04 LTS
 - GCC
-- C89 (`-std=gnu89`)
-- No global variables
-- Maximum of 5 functions per file
-- Allowed functions:
+- Norme C89 (`-std=gnu89`)
+- Pas de variables globales
+- Maximum de 5 fonctions par fichier
+- Fonctions autorisées :
   - `printf`
   - `malloc`
   - `free`
@@ -107,8 +115,20 @@ betty *.c *.h
 
 ---
 
-## Author
+# Ce qu'il faut retenir
 
-Bertrand Oeung
+- Une **structure** regroupe plusieurs variables liées entre elles.
+- Les membres d'une structure peuvent être de types différents.
+- Une structure représente une entité (personne, chien, voiture, étudiant, etc.).
+- L'opérateur `.` permet d'accéder aux membres d'une structure.
+- L'opérateur `->` permet d'accéder aux membres d'une structure via un pointeur.
+- `typedef` permet de simplifier l'écriture des types.
+- Les fichiers `.h` doivent être protégés avec des _include guards_.
 
-Student at Holberton School
+---
+
+# Auteur
+
+**Bertrand Oeung**
+
+Étudiant en développement logiciel à Holberton School.
