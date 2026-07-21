@@ -227,3 +227,7 @@ J'ai également compris que les explications fournies par une IA doivent toujour
 # Conclusion
 
 Ce projet m'a permis de comprendre que chaque message affiché par Valgrind correspond à une erreur précise dans la gestion de la mémoire. En analysant les rapports de Valgrind et en les comparant avec le code et les schémas mémoire, j'ai développé une meilleure compréhension du fonctionnement de la mémoire en C et des bonnes pratiques pour écrire des programmes plus fiables et plus sécurisés.
+
+Auteur
+
+Bertrand
