@@ -382,3 +382,5 @@ nums[0] = 42;
 ## Conclusion
 
 Ce programme montre qu'il est indispensable de vérifier qu'un pointeur est différent de `NULL` avant de l'utiliser. Déréférencer un pointeur `NULL` provoque un accès mémoire invalide et entraîne un **Segmentation Fault**. Valgrind permet d'identifier précisément l'origine de cette erreur et la ligne de code responsable.
+
+Création Ia
