@@ -273,3 +273,5 @@ Grâce à ce projet, je suis maintenant capable de :
 # Conclusion
 
 Ce projet m'a permis de développer une compréhension concrète de la gestion de la mémoire en langage C. J'ai appris à distinguer la Stack et le Heap, à suivre le cycle de vie des allocations dynamiques et à utiliser Valgrind pour identifier les erreurs mémoire. Ces connaissances constituent une base essentielle pour écrire des programmes C fiables, sécurisés et performants.
+
+Création Bertrand
