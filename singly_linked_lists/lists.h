@@ -31,4 +31,12 @@ typedef struct list_s
  */
 size_t print_list(const list_t *h);
 
+/**
+ * list_len - Compte le nombre d'éléments d'une liste chaînée
+ * @h: Pointeur vers le premier nœud de la liste
+ *
+ * Return: Retourne le nombre de nœuds de la liste
+ */
+size_t list_len(const list_t *h);
+
 #endif /* LISTS_H */
