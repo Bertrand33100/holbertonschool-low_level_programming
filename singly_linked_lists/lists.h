@@ -57,4 +57,10 @@ list_t *add_node(list_t **head, const char *str);
  */
 list_t *add_node_end(list_t **head, const char *str);
 
+/**
+ * free_list - Libère toute la mémoire d'une liste chaînée
+ * @head: Pointeur vers le premier nœud de la liste
+ */
+void free_list(list_t *head);
+
 #endif /* LISTS_H */
