@@ -61,7 +61,6 @@ session_t *store_get(store_t *st, const char *id)
 		if (cur->sess && cur->sess->id &&
 			strcmp(cur->sess->id, id) == 0)
 			return (cur->sess);
-
 		cur = cur->next;
 	}
 
@@ -115,7 +114,10 @@ void store_destroy(store_t *st)
 	while (cur)
 	{
 		next = cur->next;
-		session_destroy(cur->sess);
+
+		if (cur->sess)
+			session_destroy(cur->sess);
+
 		free(cur);
 		cur = next;
 	}
