@@ -34,13 +34,19 @@ int store_add(store_t *st, session_t *s)
 	{
 		if (cur->sess && cur->sess->id &&
 			strcmp(cur->sess->id, s->id) == 0)
+		{
+			session_destroy(s);
 			return (0);
+		}
 		cur = cur->next;
 	}
 
 	n = node_create(s);
 	if (!n)
+	{
+		session_destroy(s);
 		return (0);
+	}
 
 	n->next = st->head;
 	st->head = n;
@@ -61,6 +67,7 @@ session_t *store_get(store_t *st, const char *id)
 		if (cur->sess && cur->sess->id &&
 			strcmp(cur->sess->id, id) == 0)
 			return (cur->sess);
+
 		cur = cur->next;
 	}
 
