@@ -115,10 +115,8 @@ void store_destroy(store_t *st)
 	while (cur)
 	{
 		next = cur->next;
-
 		session_destroy(cur->sess);
 		free(cur);
-
 		cur = next;
 	}
 
